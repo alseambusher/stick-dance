@@ -1,2 +1,3 @@
-shapes="shapes/"
-padding=5
+shapes = "shapes/"
+padding = 5
+rate = 1600
