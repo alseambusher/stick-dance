@@ -1,3 +1,3 @@
 shapes = "shapes/"
 padding = 5
-rate = 1600
+rate = 44100 #sampling rate
