@@ -2,4 +2,4 @@
 *~
 *.swp
 res/
-.idea
+node_modules
