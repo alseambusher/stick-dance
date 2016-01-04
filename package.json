@@ -1,14 +1,11 @@
 {
-  "name": "stickdance",
+  "name": "stickdance.js",
   "version": "0.0.1",
   "description": "A stick dancer who dances according to any tune",
   "author": "Suresh Alse <alseambusher@gmail.com>",
   "main": "index.js",
   "engines": {
     "node": "latest"
-  },
-   "bin": {
-     "dancer": "bin/dancer.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "blessed" : "latest"
+    "blessed" : "latest",
+    "axel": "latest"
   }
 }

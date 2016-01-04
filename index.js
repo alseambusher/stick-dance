@@ -1,47 +1,34 @@
 var blessed = require('blessed')
-var screen = blessed.screen();
+contrib = require('blessed-contrib')
+
+var ctx = require('axel');
+y=1
+setInterval(function(){
+// Clear the terminal
+ctx.clear();
+
+// Sets the pixel BG color to green
+ctx.bg(0,255,0);
+
+// Draws a line into the console
+ctx.line(1,y,10,10);
+ctx.line(2,y,11,10);
+y = (y+1)%20
+ctx.bg(255,255,255);
+}, 5);
+ctx.cursor.restore();
+
+/*var screen = blessed.screen();
 
 var config = require("./config")
 var sprite = require("./sprite")
 
-// Create a box perfectly centered horizontally and vertically.
-var box = blessed.box({
-  top: 'center',
-  left: 'center',
-  width: '90%',
-  height: '90%',
-  content: 'Hello {bold}world{/bold}!',
-  tags: true,
-  border: {
-    type: 'line'
-  },
-  style: {
-    fg: config.color.main_fg,
-    bg: config.color.main_bg,
-    border: {
-      fg: '#ffffff'
-    },
-    hover: {
-      bg: 'green'
-    }
-  }
-});
-
-
-
 // Append our box to the screen.
-screen.append(box);
+screen.append(blessed.box(sprite.box));
+screen.append(blessed.box(sprite.hair));
+screen.append(blessed.box(sprite.head));
 
-
-var pixel = sprite.pixel; // TODO deep copy required?
-pixel.top = "center"
-pixel.left = 10
-console.log(pixel)
-
-screen.append(blessed.box(pixel));
-
-
-
+/*
 // If our box is clicked, change the content.
 box.on('click', function(data) {
   box.setContent('{center}Some different {red-fg}content{/red-fg}.{/center}');
@@ -55,14 +42,15 @@ box.key('enter', function() {
   box.insertLine(1, 'foo');
   screen.render();
 });
+*/
 
 // Quit on Escape, q, or Control-C.
-screen.key(['escape', 'q', 'C-c'], function(ch, key) {
-  return process.exit(0);
-});
+//screen.key(['escape', 'q', 'C-c'], function(ch, key) {
+  //return process.exit(0);
+//});
 
 // Focus our element.
-box.focus();
+//box.focus();
 
 // Render the screen.
-screen.render();
+//screen.render();

@@ -1,0 +1,16 @@
+{
+	"head":{
+		"color": "#ffcc99",
+		"width": "6%",
+		"height": "10%"
+	},
+	"hair":{
+		"color": "black",
+		"width": "30%",
+		"height": "10%",
+		"top": "-5%",
+		"left": "-1%"
+	},
+	"neck": {
+	}
+}
