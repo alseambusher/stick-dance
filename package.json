@@ -17,7 +17,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "blessed" : "latest",
     "axel": "latest"
   }
 }
