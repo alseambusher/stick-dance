@@ -17,6 +17,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "axel": "latest"
+    "axel": "latest",
+		"wav": "latest",
+		"speaker": "latest"
   }
 }
